@@ -16,30 +16,94 @@ class RandomViewController: UIViewController {
     @IBOutlet weak var rCollectionViewWidth: NSLayoutConstraint!
     @IBOutlet weak var rCollectionViewHeight: NSLayoutConstraint!
     
+    var stations:[Station] = []
+    var area:(minLon:Double, maxLon:Double, minLat:Double, maxLat:Double) = (0,0,0,0)
+    let layout = RandomCollectionViewlayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rScrollView.delegate = self
+        self.stations = JsonLoader.loadRosen()!
+        
+        let maxLonStation = stations.reduce(stations.first) {
+            (($0?.location.lon)! > $1.location.lon) ? $0 : $1
+        }
+        let minLonStation = stations.reduce(stations.first) {
+            (($0?.location.lon)! < $1.location.lon) ? $0 : $1
+        }
+        let maxLatStation = stations.reduce(stations.first) {
+            (($0?.location.lat)! > $1.location.lat) ? $0 : $1
+        }
+        let minLatStation = stations.reduce(stations.first) {
+            (($0?.location.lat)! > $1.location.lat) ? $0 : $1
+        }
+        area = ((minLonStation?.location.lon)!,
+                (maxLonStation?.location.lon)!,
+                (minLatStation?.location.lat)!,
+                (maxLatStation?.location.lat)!)
+        
+        print(area)
+        
+        layout.cellFrames = [:]
+        for (index, station) in stations.enumerated() {
+            let x = station.location.lon - area.minLon
+            let y = area.maxLat - station.location.lat  // yは逆転
+            let zoomX = x * 10000.0 * 2
+            let zoomY = y * 10000.0 * 2
+            
+            print("\(station.name) \(zoomX) \(zoomY)")
+            
+            let indexPath = IndexPath(item: index, section: 0)
+            let rect = CGRect(x: zoomX, y: zoomY, width: 100, height: 100)
+            
+            layout.cellFrames[indexPath] = rect
+        }
+        
+ //       print("\(layout.cellFrames)")
+        self.rCollectionView.delegate = self
+        self.rCollectionView.dataSource = self
+        
+        self.rCollectionView.setCollectionViewLayout(self.layout, animated: false)
+        
+        
+        rScrollView.contentSize = CGSize(width: 2000, height: 1000)
+        rCollectionViewWidth.constant = 2000
+        rCollectionViewHeight.constant = 1000
+        
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if stations.count == 0 {
+            print("なんでやねんねんねん")
+        }
+        
 
-        rCollectionView.delegate = self
-        rCollectionView.dataSource = self
-        let layout = RandomCollectionViewlayout()
-        rCollectionView.setCollectionViewLayout(layout, animated: false)
-        
-        rScrollView.contentSize = CGSize(width: 1000, height: 2000)
-        rCollectionViewWidth.constant = 1000
-        rCollectionViewHeight.constant = 2000
-        
     }
 }
 
 extension RandomViewController: UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        if (stations.count == 0) {
+            print("なんでやねん0")
+        }
+        return self.stations.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(with: RandomCollectionViewCell.self, for: indexPath)
-        cell.label1.text = String(indexPath.item)
+        
+        if (stations.count <= indexPath.item) {
+            print("なんでやねん")
+        }
+        
+        let station = self.stations[indexPath.item]
+        
+        cell.label1.text = String(station.name)
         return cell
     }
     
@@ -129,26 +193,36 @@ class RandomCollectionViewlayout:UICollectionViewFlowLayout {
     
     
     
-    
+    var cellFrames:[IndexPath:CGRect] = [:]
 }
 
 extension RandomCollectionViewlayout {
-    var cellFrames:[IndexPath:CGRect] {
-        var result:[IndexPath:CGRect] = [:]
-        for i in 0...99 {
-            let indexPath = IndexPath(item: i, section: 0)
-            let r1:CGFloat = [10,20,30,-10,-20,-30,5,4,100][i%9]
-            let r2:CGFloat = [2,4,7,-6,-20,-20,9,11,100][i%9]
-            let rect = CGRect(x: CGFloat(i * 100 - i*i*i/5), y: CGFloat(30 * i) + r1, width: 80 + r2, height: 80 + r2)
-            result[indexPath] = rect
-        }
-        return result
-    }
+//    var cellFrames:[IndexPath:CGRect] {
+//        var result:[IndexPath:CGRect] = [:]
+//        for i in 0...99 {
+//            let indexPath = IndexPath(item: i, section: 0)
+//            let r1:CGFloat = [10,20,30,-10,-20,-30,5,4,100][i%9]
+//            let r2:CGFloat = [2,4,7,-6,-20,-20,9,11,100][i%9]
+//            let rect = CGRect(x: CGFloat(i * 100 - i*i*i/5), y: CGFloat(30 * i) + r1, width: 80 + r2, height: 80 + r2)
+//            result[indexPath] = rect
+//        }
+//        return result
+//    }
     
     func attributes(indexPath:IndexPath) -> UICollectionViewLayoutAttributes {
         let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
         attributes.frame = self.cellFrames[indexPath] ?? .zero
         return attributes
+    }
+    
+}
+
+extension RandomViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        if (scrollView.isEqual(self.rScrollView)) {
+            return self.rScrollView.subviews.first!
+        }
+        return nil
     }
     
 }
