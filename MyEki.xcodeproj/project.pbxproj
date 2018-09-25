@@ -43,7 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DA0DC78421532F60004FEF8A /* RandomCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0DC78421532F60004FEF8A /* MyEki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyEki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0DC78721532F60004FEF8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA0DC78921532F60004FEF8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA0DC78C21532F60004FEF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		DA0DC78521532F60004FEF8A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA0DC78421532F60004FEF8A /* RandomCollectionView.app */,
+				DA0DC78421532F60004FEF8A /* MyEki.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,9 +209,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA0DC78321532F60004FEF8A /* RandomCollectionView */ = {
+		DA0DC78321532F60004FEF8A /* MyEki */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA0DC79621532F62004FEF8A /* Build configuration list for PBXNativeTarget "RandomCollectionView" */;
+			buildConfigurationList = DA0DC79621532F62004FEF8A /* Build configuration list for PBXNativeTarget "MyEki" */;
 			buildPhases = (
 				DA0DC78021532F60004FEF8A /* Sources */,
 				DA0DC78121532F60004FEF8A /* Frameworks */,
@@ -221,9 +221,9 @@
 			);
 			dependencies = (
 			);
-			name = RandomCollectionView;
+			name = MyEki;
 			productName = RandomCollectionView;
-			productReference = DA0DC78421532F60004FEF8A /* RandomCollectionView.app */;
+			productReference = DA0DC78421532F60004FEF8A /* MyEki.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DA0DC77F21532F5F004FEF8A /* Build configuration list for PBXProject "RandomCollectionView" */;
+			buildConfigurationList = DA0DC77F21532F5F004FEF8A /* Build configuration list for PBXProject "MyEki" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -254,7 +254,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA0DC78321532F60004FEF8A /* RandomCollectionView */,
+				DA0DC78321532F60004FEF8A /* MyEki */,
 			);
 		};
 /* End PBXProject section */
@@ -485,7 +485,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA0DC77F21532F5F004FEF8A /* Build configuration list for PBXProject "RandomCollectionView" */ = {
+		DA0DC77F21532F5F004FEF8A /* Build configuration list for PBXProject "MyEki" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA0DC79421532F62004FEF8A /* Debug */,
@@ -494,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA0DC79621532F62004FEF8A /* Build configuration list for PBXNativeTarget "RandomCollectionView" */ = {
+		DA0DC79621532F62004FEF8A /* Build configuration list for PBXNativeTarget "MyEki" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA0DC79721532F62004FEF8A /* Debug */,

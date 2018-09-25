@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RandomCollectionView.xcodeproj">
+      location = "self:/Users/osanai/ios/RandomCollectionView/MyEki.xcodeproj">
    </FileRef>
 </Workspace>
