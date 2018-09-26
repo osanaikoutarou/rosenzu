@@ -10,5 +10,17 @@ import UIKit
 
 class RandomCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var parentView: UIView!
+    @IBOutlet weak var childView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        parentView.backgroundColor = .orange
+        childView.backgroundColor = .white
+        
+        parentView.circle()
+        childView.circle()
+    }
 }

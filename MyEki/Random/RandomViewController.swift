@@ -103,7 +103,7 @@ extension RandomViewController: UICollectionViewDelegate,UICollectionViewDataSou
         
         let station = self.stations[indexPath.item]
         
-        cell.label1.text = String(station.name)
+        cell.titleLabel.text = String(station.name)
         return cell
     }
     
