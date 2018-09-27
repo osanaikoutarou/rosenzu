@@ -9,27 +9,38 @@
 import UIKit
 
 class JsonLoader: NSObject {
+    
+    var rosenData:[Rosen] = []
+    var stationData:[Station] = []
+    var companyData:[Company] = []
 
-    static func loadRosen() -> [Station]? {
-        let filepath = Bundle.main.url(forResource: "RosenData", withExtension: "json")
+    static func load(resourceName:String) -> Any? {
+        let filepath = Bundle.main.url(forResource: resourceName, withExtension: "json")
         if let filepath = filepath {
             do {
                 let data = try Data(contentsOf: filepath)
                 let jsonResult = try! JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                if let jsonResult = jsonResult as? Dictionary<String, Any> {
-                    
-                    if let array = jsonResult["銀座線"] as? [Dictionary<String, Any>] {
-                        let stations = array.map { Station.create(dictionary: $0) }
-
-                        stations.forEach { $0.description() }
-                        
-                        return stations
-                    }
-                }
+                return jsonResult
             } catch {
                 print("error")
             }
         }
         return nil
     }
+    
+    static func loadStations() -> [Station]? {
+        let jsonResult = load(resourceName: "StationData")
+//        print(jsonResult!)
+        
+        if let jsonResult = jsonResult as? [[String:Any]] {
+            jsonResult.forEach { (data:[String:Any]) in
+                let station = Station.create(dictionary: data)
+                
+                station.description()
+            }
+        }
+        
+        return []
+    }
+    
 }
