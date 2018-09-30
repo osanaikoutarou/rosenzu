@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cpZ-yf-8FF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cpZ-yf-8FF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Random View Controller-->
         <scene sceneID="2mO-Rm-sK2">
@@ -18,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" minimumZoomScale="0.5" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="eVB-xY-aQb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" minimumZoomScale="0.20000000000000001" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="eVB-xY-aQb">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yIx-Be-jM6">
@@ -49,12 +54,12 @@
                                                                     <rect key="frame" x="10" y="10" width="80" height="80"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCY-U6-PXQ">
-                                                                            <rect key="frame" x="7.5" y="19.5" width="65" height="40"/>
+                                                                            <rect key="frame" x="7.5" y="20" width="65" height="40"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="40" id="dC9-BG-HY4"/>
                                                                                 <constraint firstAttribute="width" constant="65" id="hEU-Cg-i6g"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>

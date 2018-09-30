@@ -53,8 +53,8 @@ class RandomViewController: UIViewController {
         for (index, station) in stations.enumerated() {
             let x = station.location.lon - area.minLon
             let y = area.maxLat - station.location.lat  // yは逆転
-            let zoomX = x * 10000.0 * 2
-            let zoomY = y * 10000.0 * 2
+            let zoomX = x * 10000.0 * 1.2
+            let zoomY = y * 10000.0 * 1.2
 
             print("\(station.name) \(zoomX) \(zoomY)")
 
