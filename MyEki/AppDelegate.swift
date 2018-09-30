@@ -19,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        if let rosen = JsonLoader.loadRosen() {
 //            print(rosen)
 //        }
-        
-        JsonLoader.loadStations()
+
+        JsonLoader.shared.loadAll()
+        Source.shared.setup()
         
         return true
     }

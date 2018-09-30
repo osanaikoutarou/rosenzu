@@ -10,14 +10,14 @@ import UIKit
 
 class Company: NSObject {
     
-    var code:String = ""
+    var code:Int = 0
     var name:String = ""
     
     var stationCodes:[String] = []
     
-    static func create(dictionary:[String:Any]) -> Rosen {
-        let obj = Rosen()
-        obj.code = dictionary["company_cd"] as! String
+    static func create(dictionary:[String:Any]) -> Company {
+        let obj = Company()
+        obj.code = dictionary["company_cd"] as! Int
         obj.name = dictionary["company_name"] as! String
         return obj
     }

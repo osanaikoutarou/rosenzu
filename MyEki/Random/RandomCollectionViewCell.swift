@@ -17,10 +17,14 @@ class RandomCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        parentView.backgroundColor = .orange
         childView.backgroundColor = .white
         
         parentView.circle()
         childView.circle()
+    }
+    
+    func setup(_ station:Station) {
+        titleLabel.text = String(station.name)
+        parentView.backgroundColor = station.lineColor()
     }
 }

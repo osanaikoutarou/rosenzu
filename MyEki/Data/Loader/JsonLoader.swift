@@ -10,9 +10,17 @@ import UIKit
 
 class JsonLoader: NSObject {
     
+    static let shared = JsonLoader()
+    
     var rosenData:[Rosen] = []
     var stationData:[Station] = []
     var companyData:[Company] = []
+    
+    func loadAll() {
+        stationData = JsonLoader.loadStations()!
+        rosenData = JsonLoader.loadRosen()!
+        companyData = JsonLoader.loadCompany()!
+    }
 
     static func load(resourceName:String) -> Any? {
         let filepath = Bundle.main.url(forResource: resourceName, withExtension: "json")
@@ -29,17 +37,69 @@ class JsonLoader: NSObject {
     }
     
     static func loadStations() -> [Station]? {
+        var result:[Station] = []
+        
         let jsonResult = load(resourceName: "StationData")
-//        print(jsonResult!)
         
         if let jsonResult = jsonResult as? [[String:Any]] {
             jsonResult.forEach { (data:[String:Any]) in
                 let station = Station.create(dictionary: data)
+                result.append(station)
                 
                 station.description()
             }
+            
+            return result
         }
+        return []
+    }
+    
+    static func loadRosen() -> [Rosen]? {
+        var result:[Rosen] = []
         
+        let jsonResult = load(resourceName: "RosenData")
+        
+        if let jsonResult = jsonResult as? [[String:Any]] {
+            jsonResult.forEach { (data:[String:Any]) in
+                let rosen = Rosen.create(dictionary: data)
+                result.append(rosen)
+                
+                rosen.description()
+            }
+            return result
+        }
+        return []
+    }
+    
+    static func loadCompany() -> [Company]? {
+        var result:[Company] = []
+        
+        let jsonResult = load(resourceName: "CompanyData")
+        
+        if let jsonResult = jsonResult as? [[String:Any]] {
+            jsonResult.forEach { (data:[String:Any]) in
+                let company = Company.create(dictionary: data)
+                result.append(company)
+                
+                company.description()
+            }
+            return result
+        }
+        return []
+    }
+    
+    static func loadMyRosen() -> [MyRosen]? {
+        var result:[MyRosen] = []
+        
+        let jsonResult = load(resourceName: "MyEkiData")
+        
+        if let jsonResult = jsonResult as? [[String:Any]] {
+            jsonResult.forEach { (data:[String:Any]) in
+                let myrosen = MyRosen.create(dictionary: data)
+                result.append(myrosen)
+            }
+            return result
+        }
         return []
     }
     

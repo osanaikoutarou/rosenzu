@@ -3,6 +3,15 @@
         "line_cd": 28001,
         "line_dispname": "銀座線",
         "line_name_k": "ギンザセン",
+        "line_color": "ff9500",
     },
+    {
+        "line_cd": 11302,
+        "line_dispname": "山手線",
+        "line_name_k": "ヤマノテセン",
+        "line_color": "80c241",
+
+        
+    }
 
 ]
