@@ -53,8 +53,8 @@ class RandomViewController: UIViewController {
         for (index, station) in stations.enumerated() {
             let x = station.location.lon - area.minLon
             let y = area.maxLat - station.location.lat  // yは逆転
-            let zoomX = x * 10000.0 * 1.2
-            let zoomY = y * 10000.0 * 1.2
+            let zoomX = x * 10000.0 * 1.5
+            let zoomY = y * 10000.0 * 1.5
 
             print("\(station.name) \(zoomX) \(zoomY)")
 
@@ -125,7 +125,14 @@ extension RandomViewController: UICollectionViewDelegate,UICollectionViewDataSou
 
     func scrollToCenter(point:CGPoint) {
         UIView.animate(withDuration: 0.25) {
-            self.rScrollView.contentOffset = CGPoint(x: point.x - self.rScrollView.frame.size.width/2, y: point.y - self.rScrollView.frame.size.height/2)
+            print("point.x  \(point.x)")
+            print("width  \(self.rScrollView.frame.width)")
+            
+            let scaledPoint = point.scale(self.rScrollView.zoomScale)
+            self.rScrollView.contentOffset = scaledPoint.relative(-self.rScrollView.frame.size.width/2,
+                                                                  -self.rScrollView.frame.size.height/2)
+            
+            print("contentOffset \(self.rScrollView.contentOffset)")
         }
     }
 }
@@ -152,7 +159,7 @@ class RandomCollectionViewlayout:UICollectionViewFlowLayout {
     // UICollectionView内の要素を配置するコンテンツ部のサイズを返すメソッドです。
     // UIScrollViewのcontentSizeプロパティと同じく、スクロール領域の範囲をコントロールします。
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: 1000, height: 2000)
+        return CGSize(width: 3000, height: 3000)
     }
 
 

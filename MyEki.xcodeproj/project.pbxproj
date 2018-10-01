@@ -61,6 +61,7 @@
 		DA0DC7FD2154EF7F004FEF8A /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DC7FC2154EF7F004FEF8A /* Station.swift */; };
 		DA2672C4215CA2F9009B8116 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2672C3215CA2F9009B8116 /* Company.swift */; };
 		DA2672C6215CA301009B8116 /* Rosen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2672C5215CA301009B8116 /* Rosen.swift */; };
+		DA965A552161D18500ADC57F /* CGPoint+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA965A542161D18500ADC57F /* CGPoint+Utility.swift */; };
 		DAEFECFF215C9C5C0001A8C1 /* StationData.json in Resources */ = {isa = PBXBuildFile; fileRef = DAEFECFD215C9C5C0001A8C1 /* StationData.json */; };
 		DAEFED00215C9C5C0001A8C1 /* RosenData.json in Resources */ = {isa = PBXBuildFile; fileRef = DAEFECFE215C9C5C0001A8C1 /* RosenData.json */; };
 /* End PBXBuildFile section */
@@ -123,6 +124,7 @@
 		DA0DC7FC2154EF7F004FEF8A /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		DA2672C3215CA2F9009B8116 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		DA2672C5215CA301009B8116 /* Rosen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rosen.swift; sourceTree = "<group>"; };
+		DA965A542161D18500ADC57F /* CGPoint+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Utility.swift"; sourceTree = "<group>"; };
 		DAEFECFD215C9C5C0001A8C1 /* StationData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = StationData.json; path = MyEki/Data/StationData.json; sourceTree = SOURCE_ROOT; };
 		DAEFECFE215C9C5C0001A8C1 /* RosenData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = RosenData.json; path = MyEki/Data/RosenData.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 		DA0B64DE215B229600CEAF70 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DA965A532161D16F00ADC57F /* CGPoint */,
 				1E042F4F21612126006776AC /* UIColor */,
 				DA0B64DF215B229600CEAF70 /* UIScrollView */,
 				DA0B64E1215B229600CEAF70 /* UIScreen */,
@@ -387,6 +390,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DA965A532161D16F00ADC57F /* CGPoint */ = {
+			isa = PBXGroup;
+			children = (
+				DA965A542161D18500ADC57F /* CGPoint+Utility.swift */,
+			);
+			path = CGPoint;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -469,6 +480,7 @@
 				DA0B652C215B229600CEAF70 /* UIView+Corner.swift in Sources */,
 				DA0B653D215B229600CEAF70 /* UIControl+Action.swift in Sources */,
 				DA0B6528215B229600CEAF70 /* UIApplication+.swift in Sources */,
+				DA965A552161D18500ADC57F /* CGPoint+Utility.swift in Sources */,
 				DA0B6527215B229600CEAF70 /* NibInstantiatable.swift in Sources */,
 				DA2672C4215CA2F9009B8116 /* Company.swift in Sources */,
 				DA0DC79F21532FF6004FEF8A /* RandomCollectionViewCell.swift in Sources */,
