@@ -1,6 +1,6 @@
 //
-//  RandomCollectionViewCell.swift
-//  RandomCollectionView
+//  StationCollectionViewCell.swift
+//  StationCollectionView
 //
 //  Created by osanai on 2018/09/20.
 //  Copyright © 2018年 osanai.sample.copytesting. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RandomCollectionViewCell: UICollectionViewCell {
+class StationCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var childView: UIView!

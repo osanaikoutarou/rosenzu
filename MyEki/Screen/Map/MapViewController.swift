@@ -1,6 +1,6 @@
 //
-//  RandomViewController.swift
-//  RandomCollectionView
+//  MapViewController.swift
+//  MapCollectionView
 //
 //  Created by osanai on 2018/09/20.
 //  Copyright © 2018年 osanai.sample.copytesting. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RandomViewController: UIViewController {
+class MapViewController: UIViewController {
 
     @IBOutlet weak var rCollectionView: UICollectionView!
     @IBOutlet weak var rScrollView: UIScrollView!
@@ -91,7 +91,7 @@ class RandomViewController: UIViewController {
     }
 }
 
-extension RandomViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+extension MapViewController: UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (stations.count == 0) {
             print("なんでやねん0")
@@ -100,7 +100,7 @@ extension RandomViewController: UICollectionViewDelegate,UICollectionViewDataSou
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(with: RandomCollectionViewCell.self, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(with: StationCollectionViewCell.self, for: indexPath)
 
         if (stations.count <= indexPath.item) {
             print("なんでやねん")
@@ -231,7 +231,7 @@ extension RandomCollectionViewlayout {
 
 }
 
-extension RandomViewController: UIScrollViewDelegate {
+extension MapViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         if (scrollView.isEqual(self.rScrollView)) {
             return self.rScrollView.subviews.first!
