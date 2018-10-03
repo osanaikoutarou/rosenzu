@@ -69,6 +69,12 @@
 		DA965A632161F02D00ADC57F /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA965A622161F02D00ADC57F /* MyPageViewController.swift */; };
 		DAEFECFF215C9C5C0001A8C1 /* StationData.json in Resources */ = {isa = PBXBuildFile; fileRef = DAEFECFD215C9C5C0001A8C1 /* StationData.json */; };
 		DAEFED00215C9C5C0001A8C1 /* RosenData.json in Resources */ = {isa = PBXBuildFile; fileRef = DAEFECFE215C9C5C0001A8C1 /* RosenData.json */; };
+		DAF397BD2164880E00687A67 /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF397BC2164880D00687A67 /* Join.swift */; };
+		DAF397BF2164881700687A67 /* Join.json in Resources */ = {isa = PBXBuildFile; fileRef = DAF397BE2164881700687A67 /* Join.json */; };
+		DAF397C4216488D500687A67 /* RosenList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF397C3216488D500687A67 /* RosenList.storyboard */; };
+		DAF397C6216488DD00687A67 /* StationList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF397C5216488DD00687A67 /* StationList.storyboard */; };
+		DAF397C8216488EB00687A67 /* StationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF397C7216488EB00687A67 /* StationListViewController.swift */; };
+		DAF397CA216488F400687A67 /* RosenListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF397C9216488F400687A67 /* RosenListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +143,12 @@
 		DA965A622161F02D00ADC57F /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		DAEFECFD215C9C5C0001A8C1 /* StationData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = StationData.json; path = MyEki/Data/StationData.json; sourceTree = SOURCE_ROOT; };
 		DAEFECFE215C9C5C0001A8C1 /* RosenData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = RosenData.json; path = MyEki/Data/RosenData.json; sourceTree = SOURCE_ROOT; };
+		DAF397BC2164880D00687A67 /* Join.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
+		DAF397BE2164881700687A67 /* Join.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Join.json; sourceTree = "<group>"; };
+		DAF397C3216488D500687A67 /* RosenList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RosenList.storyboard; sourceTree = "<group>"; };
+		DAF397C5216488DD00687A67 /* StationList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StationList.storyboard; sourceTree = "<group>"; };
+		DAF397C7216488EB00687A67 /* StationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewController.swift; sourceTree = "<group>"; };
+		DAF397C9216488F400687A67 /* RosenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosenListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +379,7 @@
 				1E53C750215F664B008E8901 /* MyEkiData.json */,
 				DAEFECFD215C9C5C0001A8C1 /* StationData.json */,
 				DAEFECFE215C9C5C0001A8C1 /* RosenData.json */,
+				DAF397BE2164881700687A67 /* Join.json */,
 				DA0DC7F82154EC4B004FEF8A /* Loader */,
 			);
 			path = Data;
@@ -392,6 +405,7 @@
 		DA0DC7FB2154EDD9004FEF8A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAF397BC2164880D00687A67 /* Join.swift */,
 				DA0DC7FC2154EF7F004FEF8A /* Station.swift */,
 				DA2672C3215CA2F9009B8116 /* Company.swift */,
 				DA2672C5215CA301009B8116 /* Rosen.swift */,
@@ -411,6 +425,8 @@
 		DA965A562161EB0C00ADC57F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DAF397C12164888C00687A67 /* StationList */,
+				DAF397C02164888A00687A67 /* RosenList */,
 				DA965A5F2161EFF700ADC57F /* MyPage */,
 				DA965A5C2161EFBA00ADC57F /* Top */,
 				DA965A572161EB1B00ADC57F /* DetailTop */,
@@ -443,6 +459,24 @@
 				DA965A622161F02D00ADC57F /* MyPageViewController.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		DAF397C02164888A00687A67 /* RosenList */ = {
+			isa = PBXGroup;
+			children = (
+				DAF397C3216488D500687A67 /* RosenList.storyboard */,
+				DAF397C9216488F400687A67 /* RosenListViewController.swift */,
+			);
+			path = RosenList;
+			sourceTree = "<group>";
+		};
+		DAF397C12164888C00687A67 /* StationList */ = {
+			isa = PBXGroup;
+			children = (
+				DAF397C5216488DD00687A67 /* StationList.storyboard */,
+				DAF397C7216488EB00687A67 /* StationListViewController.swift */,
+			);
+			path = StationList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,8 +538,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E53C751215F664B008E8901 /* CompanyData.json in Resources */,
+				DAF397BF2164881700687A67 /* Join.json in Resources */,
 				DA0DC79221532F62004FEF8A /* LaunchScreen.storyboard in Resources */,
 				DAEFECFF215C9C5C0001A8C1 /* StationData.json in Resources */,
+				DAF397C4216488D500687A67 /* RosenList.storyboard in Resources */,
+				DAF397C6216488DD00687A67 /* StationList.storyboard in Resources */,
 				DA965A5B2161ECA500ADC57F /* DetailTop.storyboard in Resources */,
 				DA965A5E2161EFC200ADC57F /* Top.storyboard in Resources */,
 				DA0DC79D21532F97004FEF8A /* Map.storyboard in Resources */,
@@ -541,6 +578,7 @@
 				DA0B6519215B229600CEAF70 /* ScopeMethod.swift in Sources */,
 				DA0B6522215B229600CEAF70 /* StringTo.swift in Sources */,
 				DA0B6536215B229600CEAF70 /* Int+Utility.swift in Sources */,
+				DAF397BD2164880E00687A67 /* Join.swift in Sources */,
 				DA0B652D215B229600CEAF70 /* UIView+Border.swift in Sources */,
 				DA0B6521215B229600CEAF70 /* Dictionary+.swift in Sources */,
 				DA0B6525215B229600CEAF70 /* UIImage+.swift in Sources */,
@@ -553,6 +591,7 @@
 				DA0B651B215B229600CEAF70 /* Array+.swift in Sources */,
 				DA0B652F215B229600CEAF70 /* UIView+Form.swift in Sources */,
 				DA0B6539215B229600CEAF70 /* UIViewController+Alert.swift in Sources */,
+				DAF397CA216488F400687A67 /* RosenListViewController.swift in Sources */,
 				DA0B6524215B229600CEAF70 /* Safe.swift in Sources */,
 				DA0B6532215B229600CEAF70 /* Array+Safe.swift in Sources */,
 				DA0DC78A21532F60004FEF8A /* ViewController.swift in Sources */,
@@ -560,6 +599,7 @@
 				DA0B653F215B229600CEAF70 /* UIStoryboardSegue+Utility.swift in Sources */,
 				DA0B651E215B229600CEAF70 /* StoryboardInstantiatable.swift in Sources */,
 				DA0DC7FD2154EF7F004FEF8A /* Station.swift in Sources */,
+				DAF397C8216488EB00687A67 /* StationListViewController.swift in Sources */,
 				DA0B652A215B229600CEAF70 /* UIColor+.swift in Sources */,
 				DA0B653C215B229600CEAF70 /* UITableView+Utility.swift in Sources */,
 				DA0DC78821532F60004FEF8A /* AppDelegate.swift in Sources */,
