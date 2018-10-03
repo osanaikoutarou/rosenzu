@@ -15,11 +15,13 @@ class JsonLoader: NSObject {
     var rosenData:[Rosen] = []
     var stationData:[Station] = []
     var companyData:[Company] = []
+    var joinData:[Join] = []
     
     func loadAll() {
-        stationData = JsonLoader.loadStations()!
-        rosenData = JsonLoader.loadRosen()!
-        companyData = JsonLoader.loadCompany()!
+        stationData = JsonLoader.loadStations()
+        rosenData = JsonLoader.loadRosen()
+        companyData = JsonLoader.loadCompany()
+        joinData = JsonLoader.loadJoin()
     }
 
     static func load(resourceName:String) -> Any? {
@@ -36,7 +38,7 @@ class JsonLoader: NSObject {
         return nil
     }
     
-    static func loadStations() -> [Station]? {
+    static func loadStations() -> [Station] {
         var result:[Station] = []
         
         let jsonResult = load(resourceName: "StationData")
@@ -54,7 +56,7 @@ class JsonLoader: NSObject {
         return []
     }
     
-    static func loadRosen() -> [Rosen]? {
+    static func loadRosen() -> [Rosen] {
         var result:[Rosen] = []
         
         let jsonResult = load(resourceName: "RosenData")
@@ -71,7 +73,7 @@ class JsonLoader: NSObject {
         return []
     }
     
-    static func loadCompany() -> [Company]? {
+    static func loadCompany() -> [Company] {
         var result:[Company] = []
         
         let jsonResult = load(resourceName: "CompanyData")
@@ -88,7 +90,7 @@ class JsonLoader: NSObject {
         return []
     }
     
-    static func loadMyRosen() -> [MyRosen]? {
+    static func loadMyRosen() -> [MyRosen] {
         var result:[MyRosen] = []
         
         let jsonResult = load(resourceName: "MyEkiData")
@@ -102,5 +104,21 @@ class JsonLoader: NSObject {
         }
         return []
     }
+    
+    static func loadJoin() -> [Join] {
+        var result:[Join] = []
+        
+        let jsonResult = load(resourceName: "JoinData")
+        
+        if let jsonResult = jsonResult as? [[String:Any]] {
+            jsonResult.forEach { (data:[String:Any]) in
+                let join = Join.create(dictionary: data)
+                result.append(join)
+            }
+            return result
+        }
+        return []
+    }
+
     
 }

@@ -10,8 +10,10 @@
 		1E042F4B2160F6EF006776AC /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E042F4A2160F6EF006776AC /* Source.swift */; };
 		1E042F4D2160F8AF006776AC /* MyRosen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E042F4C2160F8AF006776AC /* MyRosen.swift */; };
 		1E042F5121612139006776AC /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E042F5021612139006776AC /* UIColor+Utility.swift */; };
+		1E4373F721647ED700FA5983 /* Join.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E4373F621647ED700FA5983 /* Join.json */; };
 		1E53C751215F664B008E8901 /* CompanyData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E53C74F215F664B008E8901 /* CompanyData.json */; };
 		1E53C752215F664B008E8901 /* MyEkiData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E53C750215F664B008E8901 /* MyEkiData.json */; };
+		1E5CDD7021647FA1000495DB /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5CDD6F21647FA1000495DB /* Join.swift */; };
 		DA0B6517215B229600CEAF70 /* UIScrollView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B64E0215B229600CEAF70 /* UIScrollView+Utility.swift */; };
 		DA0B6518215B229600CEAF70 /* UISceren+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B64E2215B229600CEAF70 /* UISceren+Utility.swift */; };
 		DA0B6519215B229600CEAF70 /* ScopeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B64E5215B229600CEAF70 /* ScopeMethod.swift */; };
@@ -70,8 +72,10 @@
 		1E042F4A2160F6EF006776AC /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		1E042F4C2160F8AF006776AC /* MyRosen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRosen.swift; sourceTree = "<group>"; };
 		1E042F5021612139006776AC /* UIColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
+		1E4373F621647ED700FA5983 /* Join.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Join.json; sourceTree = "<group>"; };
 		1E53C74F215F664B008E8901 /* CompanyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyData.json; sourceTree = "<group>"; };
 		1E53C750215F664B008E8901 /* MyEkiData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyEkiData.json; sourceTree = "<group>"; };
+		1E5CDD6F21647FA1000495DB /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
 		DA0B64E0215B229600CEAF70 /* UIScrollView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utility.swift"; sourceTree = "<group>"; };
 		DA0B64E2215B229600CEAF70 /* UISceren+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISceren+Utility.swift"; sourceTree = "<group>"; };
 		DA0B64E4215B229600CEAF70 /* SwiftExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
@@ -358,6 +362,7 @@
 				DAEFECFD215C9C5C0001A8C1 /* StationData.json */,
 				DAEFECFE215C9C5C0001A8C1 /* RosenData.json */,
 				DA0DC7F82154EC4B004FEF8A /* Loader */,
+				1E4373F621647ED700FA5983 /* Join.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				DA2672C3215CA2F9009B8116 /* Company.swift */,
 				DA2672C5215CA301009B8116 /* Rosen.swift */,
 				1E042F4C2160F8AF006776AC /* MyRosen.swift */,
+				1E5CDD6F21647FA1000495DB /* Join.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				DA0DC79221532F62004FEF8A /* LaunchScreen.storyboard in Resources */,
 				DAEFECFF215C9C5C0001A8C1 /* StationData.json in Resources */,
 				DA0DC79D21532F97004FEF8A /* Random.storyboard in Resources */,
+				1E4373F721647ED700FA5983 /* Join.json in Resources */,
 				DAEFED00215C9C5C0001A8C1 /* RosenData.json in Resources */,
 				DA0DC78F21532F62004FEF8A /* Assets.xcassets in Resources */,
 				DA0DC78D21532F60004FEF8A /* Main.storyboard in Resources */,
@@ -495,6 +502,7 @@
 				DA0B651D215B229600CEAF70 /* String+.swift in Sources */,
 				DA0B651A215B229600CEAF70 /* NSObject+.swift in Sources */,
 				DA2672C6215CA301009B8116 /* Rosen.swift in Sources */,
+				1E5CDD7021647FA1000495DB /* Join.swift in Sources */,
 				DA0B6517215B229600CEAF70 /* UIScrollView+Utility.swift in Sources */,
 				DA0B6533215B229600CEAF70 /* Date+Utility.swift in Sources */,
 				DA0B653E215B229600CEAF70 /* String+Utility.swift in Sources */,

@@ -12,9 +12,10 @@ class Source: NSObject {
     static let shared = Source()
     var rosens:[Rosen] = []
     var stations:[Station] = []     // 必要な分
+    var joins:[Join] = []        // 必要な分
 
     func setup() {
-        let myrosens = JsonLoader.loadMyRosen()!
+        let myrosens = JsonLoader.loadMyRosen()
         
         // 必要な分だけ抽出
         myrosens.forEach { (myrosen) in
@@ -37,8 +38,14 @@ class Source: NSObject {
             })
         }
         
-        print(rosens)
-        print(stations)
+        // 必要な分だけ抽出
+        rosens.forEach { (rosen) in
+            let filtered = JsonLoader.shared.joinData.filter { $0.lineCode == rosen.code }
+            joins += filtered
+        }
+        
+//        print(rosens)
+//        print(stations)
     }
     
 }
