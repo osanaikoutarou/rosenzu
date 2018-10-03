@@ -77,6 +77,8 @@
 		DAF397CA216488F400687A67 /* RosenListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF397C9216488F400687A67 /* RosenListViewController.swift */; };
 		DAF397CD21648FB600687A67 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF397CC21648FB600687A67 /* Search.storyboard */; };
 		DAF397CF21648FD800687A67 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF397CE21648FD800687A67 /* SearchViewController.swift */; };
+		DAF397D22164925E00687A67 /* RosenDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF397D12164925E00687A67 /* RosenDetail.storyboard */; };
+		DAF397D42164927F00687A67 /* RosenDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF397D32164927F00687A67 /* RosenDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +155,8 @@
 		DAF397C9216488F400687A67 /* RosenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosenListViewController.swift; sourceTree = "<group>"; };
 		DAF397CC21648FB600687A67 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		DAF397CE21648FD800687A67 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DAF397D12164925E00687A67 /* RosenDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RosenDetail.storyboard; sourceTree = "<group>"; };
+		DAF397D32164927F00687A67 /* RosenDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosenDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,6 +433,7 @@
 		DA965A562161EB0C00ADC57F /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DAF397D02164924C00687A67 /* RosenDetail */,
 				DAF397CB21648FA800687A67 /* Search */,
 				DAF397C12164888C00687A67 /* StationList */,
 				DAF397C02164888A00687A67 /* RosenList */,
@@ -491,6 +496,15 @@
 				DAF397CE21648FD800687A67 /* SearchViewController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		DAF397D02164924C00687A67 /* RosenDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DAF397D12164925E00687A67 /* RosenDetail.storyboard */,
+				DAF397D32164927F00687A67 /* RosenDetailViewController.swift */,
+			);
+			path = RosenDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,6 +572,7 @@
 				DAF397CD21648FB600687A67 /* Search.storyboard in Resources */,
 				DAF397C4216488D500687A67 /* RosenList.storyboard in Resources */,
 				DAF397C6216488DD00687A67 /* StationList.storyboard in Resources */,
+				DAF397D22164925E00687A67 /* RosenDetail.storyboard in Resources */,
 				DA965A5B2161ECA500ADC57F /* DetailTop.storyboard in Resources */,
 				DA965A5E2161EFC200ADC57F /* Top.storyboard in Resources */,
 				DA0DC79D21532F97004FEF8A /* Map.storyboard in Resources */,
@@ -579,6 +594,7 @@
 				DA0B6518215B229600CEAF70 /* UISceren+Utility.swift in Sources */,
 				DA0B6529215B229600CEAF70 /* Operator+.swift in Sources */,
 				DA0DC79B21532F85004FEF8A /* MapViewController.swift in Sources */,
+				DAF397D42164927F00687A67 /* RosenDetailViewController.swift in Sources */,
 				DA965A592161EC9900ADC57F /* DetailTopViewController.swift in Sources */,
 				DA0B652C215B229600CEAF70 /* UIView+Corner.swift in Sources */,
 				DA0B653D215B229600CEAF70 /* UIControl+Action.swift in Sources */,

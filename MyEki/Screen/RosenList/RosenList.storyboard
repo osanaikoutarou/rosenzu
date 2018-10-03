@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Rosen List View Controller-->
         <scene sceneID="Xvq-QB-bdw">
@@ -21,6 +26,44 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eBk-SW-oQq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RosenListTableViewCell" rowHeight="70" id="sdO-6O-kq0" customClass="RosenListTableViewCell" customModule="MyEki" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sdO-6O-kq0" id="T3K-Q4-uYV">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6N-SM-lib">
+                                                    <rect key="frame" x="15" y="15" width="40" height="40"/>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="dY1-GM-f0j"/>
+                                                        <constraint firstAttribute="width" constant="40" id="hy6-AY-Xs6"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mm-MY-R8V">
+                                                    <rect key="frame" x="70" y="0.0" width="262" height="69.5"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7mm-MY-R8V" firstAttribute="top" secondItem="T3K-Q4-uYV" secondAttribute="top" id="2cZ-pe-Eol"/>
+                                                <constraint firstAttribute="bottom" secondItem="b6N-SM-lib" secondAttribute="bottom" constant="15" id="N3z-vA-Ipt"/>
+                                                <constraint firstAttribute="trailing" secondItem="7mm-MY-R8V" secondAttribute="trailing" constant="10" id="boQ-Pb-9Yi"/>
+                                                <constraint firstItem="b6N-SM-lib" firstAttribute="top" secondItem="T3K-Q4-uYV" secondAttribute="top" constant="15" id="c6q-8s-Ck0"/>
+                                                <constraint firstItem="b6N-SM-lib" firstAttribute="leading" secondItem="T3K-Q4-uYV" secondAttribute="leading" constant="15" id="dEm-6L-Nz7"/>
+                                                <constraint firstItem="7mm-MY-R8V" firstAttribute="leading" secondItem="b6N-SM-lib" secondAttribute="trailing" constant="15" id="l2u-o4-8BB"/>
+                                                <constraint firstAttribute="bottom" secondItem="7mm-MY-R8V" secondAttribute="bottom" id="oOt-8g-efA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="7mm-MY-R8V" id="XX6-9D-9Y0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,10 +76,22 @@
                         <viewLayoutGuide key="safeArea" id="E2c-Rj-lyV"/>
                     </view>
                     <navigationItem key="navigationItem" id="SN4-1Y-Sjg"/>
+                    <connections>
+                        <outlet property="rosenListTableView" destination="eBk-SW-oQq" id="d0f-Mw-z60"/>
+                        <segue destination="Xha-pd-EeI" kind="show" identifier="RosenDetail" id="tDZ-PC-SpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gG-vV-YAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1292" y="-67.016491754122939"/>
+        </scene>
+        <!--RosenDetail-->
+        <scene sceneID="uhr-el-NZZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RosenDetail" id="Xha-pd-EeI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="key-7E-J6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2107" y="-35"/>
         </scene>
         <!--駅-->
         <scene sceneID="dQS-jt-fsn">

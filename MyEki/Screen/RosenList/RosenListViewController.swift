@@ -9,27 +9,39 @@
 import UIKit
 
 class RosenListViewController: UIViewController {
-
+    
+    @IBOutlet weak var rosenListTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        rosenListTableView.delegate = self
+        rosenListTableView.dataSource = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension RosenListViewController:UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(with: RosenListTableViewCell.self, for: indexPath)
+        cell.nameLabel.text = "山手線"
+        return cell
     }
-    */
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "RosenDetail", sender: nil)
+    }
+    
+    
+}
 
+
+class RosenListTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var nameLabel: UILabel!
 }
