@@ -12,6 +12,7 @@
 		1E042F5121612139006776AC /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E042F5021612139006776AC /* UIColor+Utility.swift */; };
 		1E53C751215F664B008E8901 /* CompanyData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E53C74F215F664B008E8901 /* CompanyData.json */; };
 		1E53C752215F664B008E8901 /* MyEkiData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E53C750215F664B008E8901 /* MyEkiData.json */; };
+		1E5CDD7A2166EC18000495DB /* StationListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5CDD792166EC18000495DB /* StationListTableViewCell.swift */; };
 		DA0B6517215B229600CEAF70 /* UIScrollView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B64E0215B229600CEAF70 /* UIScrollView+Utility.swift */; };
 		DA0B6518215B229600CEAF70 /* UISceren+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B64E2215B229600CEAF70 /* UISceren+Utility.swift */; };
 		DA0B6519215B229600CEAF70 /* ScopeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B64E5215B229600CEAF70 /* ScopeMethod.swift */; };
@@ -87,6 +88,7 @@
 		1E042F5021612139006776AC /* UIColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
 		1E53C74F215F664B008E8901 /* CompanyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyData.json; sourceTree = "<group>"; };
 		1E53C750215F664B008E8901 /* MyEkiData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyEkiData.json; sourceTree = "<group>"; };
+		1E5CDD792166EC18000495DB /* StationListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListTableViewCell.swift; sourceTree = "<group>"; };
 		DA0B64E0215B229600CEAF70 /* UIScrollView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utility.swift"; sourceTree = "<group>"; };
 		DA0B64E2215B229600CEAF70 /* UISceren+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISceren+Utility.swift"; sourceTree = "<group>"; };
 		DA0B64E4215B229600CEAF70 /* SwiftExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftExtensions.h; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 			children = (
 				DAF397C5216488DD00687A67 /* StationList.storyboard */,
 				DAF397C7216488EB00687A67 /* StationListViewController.swift */,
+				1E5CDD792166EC18000495DB /* StationListTableViewCell.swift */,
 			);
 			path = StationList;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				DA0B6528215B229600CEAF70 /* UIApplication+.swift in Sources */,
 				DA965A552161D18500ADC57F /* CGPoint+Utility.swift in Sources */,
 				DA0B6527215B229600CEAF70 /* NibInstantiatable.swift in Sources */,
+				1E5CDD7A2166EC18000495DB /* StationListTableViewCell.swift in Sources */,
 				DA2672C4215CA2F9009B8116 /* Company.swift in Sources */,
 				DA965A632161F02D00ADC57F /* MyPageViewController.swift in Sources */,
 				DA0DC79F21532FF6004FEF8A /* MapCollectionViewCell.swift in Sources */,

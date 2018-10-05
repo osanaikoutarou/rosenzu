@@ -93,11 +93,11 @@
             </objects>
             <point key="canvasLocation" x="2107" y="-35"/>
         </scene>
-        <!--駅-->
+        <!--路線-->
         <scene sceneID="dQS-jt-fsn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vrs-lU-H8g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="駅" image="a" id="i6s-C8-aOK"/>
+                    <tabBarItem key="tabBarItem" title="路線" image="a" id="i6s-C8-aOK"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vup-rD-FOd">

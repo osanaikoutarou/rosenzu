@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyEki/Common/Source.swift"
-            timestampString = "560147896.44788"
+            timestampString = "560369203.734506"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "setup()"
             landmarkType = "7">
          </BreakpointContent>

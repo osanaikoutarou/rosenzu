@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Station List View Controller-->
         <scene sceneID="CXq-gY-50o">
@@ -17,7 +22,47 @@
                     <view key="view" contentMode="scaleToFill" id="0M0-1E-q2Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HSY-6W-xyu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StationListTableViewCell" rowHeight="70" id="oHs-03-M5h" customClass="StationListTableViewCell" customModule="MyEki" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oHs-03-M5h" id="iI8-zX-dsV">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85N-hG-Ekf">
+                                                    <rect key="frame" x="10" y="0.0" width="322" height="69.5"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="85N-hG-Ekf" secondAttribute="trailing" constant="10" id="LLW-hL-i0Z"/>
+                                                <constraint firstItem="85N-hG-Ekf" firstAttribute="leading" secondItem="iI8-zX-dsV" secondAttribute="leading" constant="10" id="QZc-0D-qOz"/>
+                                                <constraint firstAttribute="bottom" secondItem="85N-hG-Ekf" secondAttribute="bottom" id="VI9-jb-N9H"/>
+                                                <constraint firstItem="85N-hG-Ekf" firstAttribute="top" secondItem="iI8-zX-dsV" secondAttribute="top" id="q3Z-Mb-57R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="85N-hG-Ekf" id="0dJ-UO-bJo"/>
+                                            <outlet property="stationNameLabel" destination="85N-hG-Ekf" id="Fnt-Ef-HOB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4fN-qd-2iF" firstAttribute="trailing" secondItem="HSY-6W-xyu" secondAttribute="trailing" id="1Nb-t3-swO"/>
+                            <constraint firstItem="HSY-6W-xyu" firstAttribute="top" secondItem="4fN-qd-2iF" secondAttribute="top" id="KIl-co-FEB"/>
+                            <constraint firstAttribute="bottom" secondItem="HSY-6W-xyu" secondAttribute="bottom" id="gas-Uc-PCJ"/>
+                            <constraint firstItem="HSY-6W-xyu" firstAttribute="leading" secondItem="0M0-1E-q2Y" secondAttribute="leading" id="uFI-SY-JcW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4fN-qd-2iF"/>
                     </view>
                     <navigationItem key="navigationItem" id="9zb-M9-wyt"/>
@@ -26,11 +71,11 @@
             </objects>
             <point key="canvasLocation" x="1504.8" y="-192.05397301349328"/>
         </scene>
-        <!--路線-->
+        <!--駅-->
         <scene sceneID="Tl3-za-oeE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MCd-NS-uMf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="路線" image="a" id="QRi-4H-Ng5"/>
+                    <tabBarItem key="tabBarItem" title="駅" image="a" id="QRi-4H-Ng5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cyx-SI-MJa">
